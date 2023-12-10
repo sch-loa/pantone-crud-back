@@ -24,7 +24,7 @@ repositories {
 dependencies {
     val kotestVersion = "5.4.2"
 
-    // básicos de cualquier proyecto Spring Boot
+    // basic springboot dependencies
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-hateoas")
     implementation("org.springframework.boot:spring-boot-starter-data-rest")

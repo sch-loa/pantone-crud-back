@@ -1,1 +1,1 @@
-rootProject.name = "proyecto-base-tp"
+rootProject.name = "pantone"
