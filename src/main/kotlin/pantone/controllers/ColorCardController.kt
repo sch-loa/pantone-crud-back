@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
-import pantone.bootstrap.dto.ColorCardDTO
-import pantone.bootstrap.dto.fromDTO
-import pantone.bootstrap.dto.toDTO
+import pantone.dto.ColorCardDTO
+import pantone.dto.fromDTO
+import pantone.dto.toDTO
 import pantone.services.ColorCardsService
 
 @RestController
@@ -28,6 +29,12 @@ class ColorCardController {
     @Operation(summary = "creates a new color card")
     fun createColorCard(@RequestBody colorCard: ColorCardDTO){
         colorCardsService.createColorCard(colorCard.fromDTO())
+    }
+
+    @PutMapping("/pantone/updateColorCard")
+    @Operation(summary = "updates an existing color card")
+    fun updateColorCard(@RequestBody colorCard: ColorCardDTO){
+        colorCardsService.updateColorCard(colorCard.fromDTO())
     }
 
     @DeleteMapping("/pantone/deleteCard")

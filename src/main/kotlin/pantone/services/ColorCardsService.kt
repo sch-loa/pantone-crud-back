@@ -15,6 +15,10 @@ class ColorCardsService{
     fun createColorCard(card: ColorCard){
         colorCardsRepository.create(card)
     }
+
+    fun updateColorCard(card: ColorCard){
+        colorCardsRepository.update(card)
+    }
     fun deleteColorCard(id: Int){
         val card = colorCardsRepository.getByID(id)
         colorCardsRepository.delete(card!!)

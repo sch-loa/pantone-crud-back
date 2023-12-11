@@ -1,6 +1,6 @@
 package pantone.domain
 
-class ColorCard(val code: Int, val texture: Texture, val hexaColor: String){
+class ColorCard(var code: Int, var texture: Texture, var hexaColor: String){
     var id = 0
 }
 

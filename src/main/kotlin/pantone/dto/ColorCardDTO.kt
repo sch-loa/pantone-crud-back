@@ -1,4 +1,4 @@
-package pantone.bootstrap.dto
+package pantone.dto
 
 import pantone.domain.ColorCard
 import pantone.domain.Texture
