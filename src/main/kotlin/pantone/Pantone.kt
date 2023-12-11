@@ -1,11 +1,11 @@
-package pantone.controller
+package pantone
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PantoneApplication
+class Pantone
 
 fun main(args: Array<String>) {
-    runApplication<PantoneApplication>(*args)
+    runApplication<Pantone>(*args)
 }

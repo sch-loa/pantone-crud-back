@@ -1,4 +1,4 @@
-package pantone.controller
+package pantone.controllers
 
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
