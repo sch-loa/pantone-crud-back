@@ -5,8 +5,16 @@ import pantone.domain.ColorCard
 
 @Repository
 class ColorCardsRepository {
-    lateinit var collection: MutableSet<ColorCard>
+    var collection: MutableSet<ColorCard> = mutableSetOf()
 
     fun getByID(id: Int) = collection.find { it.id == id }
+    fun create(colorCard: ColorCard){
+        if(isNew(colorCard)){
+            colorCard.id = assignId()
+            collection.add(colorCard)
+        }
+    }
     fun delete(colorCard: ColorCard){ collection.remove(colorCard) }
+    private fun assignId() = if(collection.isEmpty()) 1 else collection.maxOf { it.id } + 1
+    private fun isNew(colorCard: ColorCard) = colorCard.id == 0
 }
